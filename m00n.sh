@@ -12,7 +12,7 @@ key_word="Phase:"
 bracket_start="span>"
 bracket_end="<\/span"
 phase="$(curl -s $url | grep $key_word | grep -oP "(?<=$bracket_start).*(?=$bracket_end)")"
-echo $phase
+echo "$phase"
 
 case "$phase" in
    # 0/8
